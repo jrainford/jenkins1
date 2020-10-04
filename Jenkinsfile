@@ -14,6 +14,7 @@ pipeline {
                     uname -a
                 '''
             }
+        }
         stage('Test') {
             steps {
                 echo 'Testing'
@@ -23,8 +24,6 @@ pipeline {
             steps {
                 echo 'Deploying'
             }
-        }
-
         }
     }
     post {
