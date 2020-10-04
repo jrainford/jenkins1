@@ -10,6 +10,7 @@ pipeline {
                     ls -lah
                     whoami
                     pwd
+                    uname -a
                 '''
             }
         }
