@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps  {
+                echo 'Building'
                 sh 'python --version'
                 sh 'echo "Hello World"'
                 sh '''
@@ -13,6 +14,17 @@ pipeline {
                     uname -a
                 '''
             }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+
         }
     }
     post {
@@ -34,3 +46,4 @@ pipeline {
         }
     }
 }
+
